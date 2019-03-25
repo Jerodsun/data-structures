@@ -1,0 +1,39 @@
+*linked_queue and exceptions support generating a breadth-first traversal.
+
+tree:
+Abstract base class supporting preorder, postorder, and breadth-first traversals.
+
+  def __iter__(self):
+    """Generate an iteration of the tree's elements."""
+    for p in self.positions():                        # use same order as positions()
+      yield p.element()                               # but yield each element
+
+Default iteration type can be changed here.
+
+  def positions(self):
+    """Generate an iteration of the tree's positions."""
+    return self.preorder()                            # return entire preorder iteration
+
+Iteration of positional elements vs. positions.
+
+binary_tree:
+Abstract base class representing a binary tree structure. Adds inorder support.
+
+linked_binary_tree:
+Concrete linked implementation of a binary tree. Not related to linked lists.
+
+g = LinkedBinaryTree()
+g._add_root("root")
+g._add_left(g.root(), "left")
+g._add_right(g.root(), "right")
+for i in g.positions():
+    print(i.element())
+    
+#left, root, right
+
+euler_tour:
+Implementation of a euler tour by passing a tree structure used. 
+
+expression_tree:
+A demonstration of using a linked binary tree to create an expression tree and evaluate the answer.
+

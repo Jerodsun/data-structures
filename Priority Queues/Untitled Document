@@ -1,0 +1,18 @@
+exceptions, positional_list support priority queue implementations.
+
+sorted_priority_queue:
+Priority queue sorts after each insertion to min-oriented. Each pop is instant.
+
+unsorted_priority_queue:
+Each insertion is instant. Each search or pop has to traverse all elements.
+
+heap_priority_queue:
+Priority queue maintaing the heap-order property. That is, in an array representation, for each i, if 2i + 1 or 2i + 2 exists (zero-indexed in Python), i is the smaller of the two.
+Achieved through up-heap bubbling after each insertion, down-heap bubbling after each root removal and replacement with the last.
+
+adaptable_heap_priority_queue:
+Adds the capability to arbitrarily change priority placements. Adds a locator instance to update or remove based on locator.
+Ex. A customer is given code "AAA", priority "3", and is hence inserted into the priority queue with a certain index, say 6.
+*Note that heap sort is not stable. If the algorithm is stable, then each sort maintains the previous order for equal keys.
+
+For example, a 3-tuple can be sorted by day first, then by month, then by year.

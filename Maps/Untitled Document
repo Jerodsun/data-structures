@@ -1,0 +1,28 @@
+An application of maps (demonstrated in word_frequency) is to get the word count for each word.
+
+map_base:
+Abstract map base.
+
+hash_map_base:
+Abstract base class with randomized multiply-add-and-divide (MAD) hash implementation.
+
+chain_hash_map:
+Map implementation with separate chaining.
+
+probe_hash_map:
+Map implementation with linear probing.
+
+
+---- Advantages of sorted maps ----
+Normal maps only allow for exact search - if a key is missing, it won't be found. Ex. time series. 
+Sorted maps allow:
+find_min, find_max
+find_lt(k) (greatest key strictly less than k), find_le(k) (or equal to)
+find_gt(k) (least key strictly greater than k), find__e(k) (or equal to)
+find_range(start, stop)
+
+By using a sorted search table with binary search.
+
+sorted_table_map:
+Map implementation using a sorted table. Sorted tables are good for many searches, relatively few updates as M[k] = v has O(n) worst case time - a shift throughout the index.
+
