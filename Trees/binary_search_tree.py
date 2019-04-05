@@ -283,14 +283,14 @@ class TreeMap(LinkedBinaryTree, MapBase):
     Caller should ensure that p is not the root.
     """
     """Rotate Position p above its parent."""
-    x = p._node
+    x = p._node                                   #t0 in the figure
     y = x._parent                                 # we assume this exists
     z = y._parent                                 # grandparent (possibly None)
     if z is None:            
       self._root = x                              # x becomes root
       x._parent = None        
     else:
-      self._relink(z, x, y == z._left)            # x becomes a direct child of z
+      self._relink(z, x, y == z._left)            # x becomes a direct child of z, True/False condition
     # now rotate x and y, including transfer of middle subtree
     if x == y._left:
       self._relink(y, x._right, True)             # x._right becomes left child of y

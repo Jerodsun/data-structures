@@ -37,3 +37,16 @@ Implementation of a euler tour by passing a tree structure used.
 expression_tree:
 A demonstration of using a linked binary tree to create an expression tree and evaluate the answer.
 
+
+Binary search trees are like sorted maps, except with a tree structure with key-values instead of arrays.
+
+binary_search_tree:
+Basic implementation of a binary search tree, with calls to presumed methods of _rebalance_insert/delete/access. Those will be implemented in balanced search trees.
+• Elements stored in the left subtree of p (if any) are less than e(p).
+• Elements stored in the right subtree of p (if any) are greater than e(p).
+
+avl_tree:
+AVL trees satisfy the height-balance property: For every position p, the heights of the children of p differ by at most 1. Note that it means that every subtree is an AVL tree. Height is at most 2*logn + 2.
+
+splay_tree:
+Move-to-front heuristic. The most recently accessed position is splayed until it becomes the new root. Rememeber that it retains the properties of binary_search_tree.
